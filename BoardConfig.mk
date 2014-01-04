@@ -19,7 +19,7 @@
 -include vendor/samsung/hltetmo/BoardConfigVendor.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := hltetmo,SM-N900T
+TARGET_OTA_ASSERT_DEVICE := hltedcm,SC-01F
 
 # Kernel source and configs
-TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_hltetmo_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_hltedcm_defconfig
