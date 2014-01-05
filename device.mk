@@ -12,22 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#
-# This file is the build configuration for a full Android
-# build for toro hardware. This cleanly combines a set of
-# device-specific aspects (drivers) with a device-agnostic
-# product configuration (apps). Except for a few implementation
-# details, it only fundamentally contains two inherit-product
-# lines, full and toro, hence its name.
-#
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-# Inherit from hltetmo device
-$(call inherit-product, device/samsung/hltedcm/device.mk)
+$(call inherit-product-if-exists, vendor/samsung/hltedcm/hltedcm-vendor.mk)
 
-# Discard inherited values and use our own instead.
-PRODUCT_NAME := full_hltedcm
-PRODUCT_DEVICE := hltedcm
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SC-01F
+TARGET_NFC_TECH := nxp
+
+# Device Overlays
+DEVICE_PACKAGE_OVERLAYS += device/samsung/hltedcm/overlay
+
+LOCAL_PATH := device/samsung/jfltedcm
+# Init files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/sbin/recovery-prepprocess:root/sbin/recovery-prepprocess
+
+
+# Inherit from hlte-common
+$(call inherit-product, device/samsung/hlte-common/hlte-common.mk)
