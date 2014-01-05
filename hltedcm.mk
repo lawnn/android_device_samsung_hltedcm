@@ -12,12 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+LOCAL_PATH := device/samsung/hltedcm
+
 $(call inherit-product-if-exists, vendor/samsung/hltedcm/hltedcm-vendor.mk)
 
 TARGET_NFC_TECH := nxp
 
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/hltedcm/overlay
+
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/sbin/recovery-prepprocess:root/sbin/recovery-prepprocess
 
 # Inherit from hlte-common
 $(call inherit-product, device/samsung/hlte-common/hlte-common.mk)
