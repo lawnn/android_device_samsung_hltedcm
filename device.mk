@@ -20,7 +20,7 @@ TARGET_NFC_TECH := nxp
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/hltedcm/overlay
 
-LOCAL_PATH := device/samsung/jfltedcm
+LOCAL_PATH := device/samsung/hltedcm
 # Init files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/sbin/recovery-prepprocess:root/sbin/recovery-prepprocess

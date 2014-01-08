@@ -16,7 +16,7 @@
 -include device/samsung/hlte-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/samsung/hltetmo/BoardConfigVendor.mk
+-include vendor/samsung/hltedcm/BoardConfigVendor.mk
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := hltedcm,SC-01F
