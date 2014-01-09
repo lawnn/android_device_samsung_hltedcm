@@ -19,12 +19,12 @@
 -include vendor/samsung/hltedcm/BoardConfigVendor.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := msm8974-sec-hltejpn
+TARGET_OTA_ASSERT_DEVICE := hltedcm,SC-01F
 
 
 # Kernel source and configs
 TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_hltedcm_defconfig
-TARGET_KERNEL_DTS_FILES := hltedcm,SC-01F
+TARGET_KERNEL_DTS_FILES := msm8974-sec-hltejpn
 
 #recovery
 BOARD_RECOVERY_SWIPE := true
