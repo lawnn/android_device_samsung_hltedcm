@@ -23,8 +23,10 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/hltedcm/overlay
 LOCAL_PATH := device/samsung/hltedcm
 # Init files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/sbin/recovery-prepprocess:root/sbin/recovery-prepprocess
-
+    $(LOCAL_PATH)/rootdir/sbin/recovery-prepprocess:root/sbin/recovery-prepprocess\
+    $(LOCAL_PATH)/rootdir/sbin/felica_init.sh:root/sbin/felica_init.sh \
+    $(LOCAL_PATH)/rootdir/sbin/setpropex:root/sbin/setpropex \
+    $(LOCAL_PATH)/rootdir/init.carrier.rc:root/init.carrier.rc
 
 # Inherit from hlte-common
 $(call inherit-product, device/samsung/hlte-common/hlte-common.mk)
