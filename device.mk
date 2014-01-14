@@ -15,6 +15,10 @@
 
 $(call inherit-product-if-exists, vendor/samsung/hltedcm/hltedcm-vendor.mk)
 
+
+#AOJP common
+$(call inherit-product-if-exists, vendor/aojp/config/aojp.mk)
+
 TARGET_NFC_TECH := nxp
 
 # Device Overlays
@@ -23,9 +27,6 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/hltedcm/overlay
 LOCAL_PATH := device/samsung/hltedcm
 # Init files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/sbin/recovery-prepprocess:root/sbin/recovery-prepprocess\
-    $(LOCAL_PATH)/rootdir/sbin/felica_init.sh:root/sbin/felica_init.sh \
-    $(LOCAL_PATH)/rootdir/sbin/setpropex:root/sbin/setpropex \
     $(LOCAL_PATH)/rootdir/init.carrier.rc:root/init.carrier.rc
 
 # Default Locale
