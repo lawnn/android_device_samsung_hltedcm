@@ -15,13 +15,6 @@
 
 $(call inherit-product-if-exists, vendor/samsung/hltedcm/hltedcm-vendor.mk)
 
-
-#AOJP Recovery
-$(call inherit-product-if-exists, bootable/recovery/etc/aojp.mk)
-
-#AOJP Common
-$(call inherit-product-if-exists, vendor/aojp/config/aojp.mk)
-
 TARGET_NFC_TECH := nxp
 
 # Device Overlays
