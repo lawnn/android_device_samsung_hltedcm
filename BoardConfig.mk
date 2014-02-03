@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # inherit from hlte-common device
--include device/samsung/hlte-common/BoardConfigCommon.mk
+-include device/samsung/hlte/BoardConfig.mk
 
 # inherit from the proprietary version
 -include vendor/samsung/hltedcm/BoardConfigVendor.mk

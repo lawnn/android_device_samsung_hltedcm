@@ -31,4 +31,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.locale.region=JP
 
 # Inherit from hlte-common
-$(call inherit-product, device/samsung/hlte-common/hlte-common.mk)
+$(call inherit-product, device/samsung/hlte/device.mk)
