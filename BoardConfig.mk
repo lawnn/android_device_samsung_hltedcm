@@ -34,7 +34,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # Ril
-BOARD_RIL_CLASS := ../../../device/samsung/hlte/ril
+BOARD_RIL_CLASS := ../../../device/samsung/hltedcm/ril
 
 # inherit from the proprietary version
 -include vendor/samsung/hltedcm/BoardConfigVendor.mk
