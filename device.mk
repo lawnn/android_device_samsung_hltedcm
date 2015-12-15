@@ -18,9 +18,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/hltedcm/hltedcm-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/hlte-felica-common/felica-common-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+DEVICE_NFC_SONY=yes
+
+# Ramdisk for FeliCa
+PRODUCT_PACKAGES += \
+    init.carrier.rc \
+    init.felica.sh
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 
 # Common hlte
 $(call inherit-product, device/samsung/hlte-common/hlte.mk)
