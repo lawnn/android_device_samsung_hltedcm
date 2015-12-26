@@ -33,5 +33,10 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 28651290624
 BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
 
+ifeq ($(TARGET_RECOVERY),twrp)
+TARGET_PREBUILT_KERNEL := device/samsung/hltedcm/prebuilt/kernel
+TARGET_PREBUILT_DT := device/samsung/hltedcm/prebuilt/dt.img
+endif
+
 # inherit from the proprietary version
 -include vendor/samsung/hltedcm/BoardConfigVendor.mk
