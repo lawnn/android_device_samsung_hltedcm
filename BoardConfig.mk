@@ -22,6 +22,9 @@ TARGET_INIT_VENDOR_LIB := libinit_msm8974
 TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/hltedcm/init/init_hltedcm.cpp
 TARGET_UNIFIED_DEVICE := true
 
+# SNFC
+BOARD_NFC_CHIPSET := sony
+
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_hlte_dcm_defconfig 
 
