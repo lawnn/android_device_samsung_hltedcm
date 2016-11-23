@@ -3,5 +3,5 @@
 set -e
 
 export VENDOR=samsung
-export DEVICE=hlte
+export DEVICE=hltedcm
 ./../../$VENDOR/hlte-common/extract-files.sh $@

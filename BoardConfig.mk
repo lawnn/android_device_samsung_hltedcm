@@ -1,4 +1,4 @@
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,11 +15,11 @@
 # inherit from common hlte
 -include device/samsung/hlte-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := hltexx,SM-N9005,hltetmo,SM-N900T,hltecan,SM-N900W8,hlteatt,SM-N900A,hlte,hlteskt,hltektt,SM-N900S,SM-N900K
+TARGET_OTA_ASSERT_DEVICE := hlte,hltedcm,SM-N900D,SC-01F
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm8974
-TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/hlte/init/init_hlte.cpp
+TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/hltedcm/init/init_hltedcm.cpp
 TARGET_UNIFIED_DEVICE := true
 
 # Partitions
@@ -31,4 +31,4 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # inherit from the proprietary version
--include vendor/samsung/hlte/BoardConfigVendor.mk
+-include vendor/samsung/hltedcm/BoardConfigVendor.mk
